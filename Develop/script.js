@@ -24,6 +24,16 @@ function generatePassword(){
   ]
   console.log(availableCharacters)
 
+  // generate password
+  
+  var password ="";
+  if(availableCharacters.length === 0) "";
+  for(var i =0; i<length; i++){
+    const randomIndex = Math.floor(Math.random() * availableCharacters.length);
+    password += availableCharacters[randomIndex];
+  }
+  return password;
+
 }
 
 
