@@ -1,17 +1,44 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-// Password criteria arrays 
-var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-var specialChar = ["!", "%", "&", ",", "*", "+", "-", ".", "/", "<", ">", "?","~"];
-var alphaLower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var alphaUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
-// Adding Variable Declaration 
-var confirmLength = "";
-var confirmSpecialCharacter;
-var confirmNumericCharacter;
-var confirmUpperCase;
-var confirmLowerCase;
+//  Add password criteria arrays 
+const number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+const specialChar = ["!", "%", "&", ",", "*", "+", "-", ".", "/", "<", ">", "?", "~"];
+const alphaLower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+const alphaUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
+//Add confirmation message
+function generatePassword(){
+
+
+  const length = numberOfCharacters()
+  const hasNumber = confirm("Numbers?")
+  const hasSpecialChar = confirm("Special characters ?")
+  const hasAlpaLower = confirm("Lowercase character")
+  const hasAlphaUpper = confirm("UpperCase")
+  const availableCharacters = [
+    ...(hasNumber ? number : []),
+    ...(hasSpecialChar ? specialChar : []),
+    ...(hasAlpaLower ? alphaLower : []),
+    ...(hasAlphaUpper ? alphaUpper : []),
+  ]
+  console.log(availableCharacters)
+
+}
+
+
+
+//Add condattion function
+function numberOfCharacters() {
+  var confirmLength = parseInt(prompt("How many characters would you like your password to contain?"));
+  if (numberOfCharacters <= 7 || numberOfCharacters >= 129) {
+    alert("Please enter valid length.")
+    numberOfCharacters()
+  }
+  return confirmLength
+}
+
+
 
 // Write password to the #password input
 function writePassword() {
