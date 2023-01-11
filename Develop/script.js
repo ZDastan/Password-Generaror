@@ -14,8 +14,8 @@ function generatePassword(){
   const length = numberOfCharacters()
   const hasNumber = confirm("Numbers?")
   const hasSpecialChar = confirm("Special characters ?")
-  const hasAlpaLower = confirm("Lowercase character")
-  const hasAlphaUpper = confirm("UpperCase")
+  const hasAlpaLower = confirm("Lowercase character?")
+  const hasAlphaUpper = confirm("UpperCase?")
   const availableCharacters = [
     ...(hasNumber ? number : []),
     ...(hasSpecialChar ? specialChar : []),
@@ -25,7 +25,7 @@ function generatePassword(){
   console.log(availableCharacters)
 
   // generate password
-  
+
   var password ="";
   if(availableCharacters.length === 0) "";
   for(var i =0; i<length; i++){
@@ -41,9 +41,11 @@ function generatePassword(){
 //Add condattion function
 function numberOfCharacters() {
   var confirmLength = parseInt(prompt("How many characters would you like your password to contain?"));
-  if (numberOfCharacters <= 7 || numberOfCharacters >= 129) {
-    alert("Please enter valid length.")
+  if (numberOfCharacters < 8 || numberOfCharacters > 128) {
+    return("Please enter valid length.")
     numberOfCharacters()
+  } else if (isNaN(numberOfCharacters)) {
+    numberOfCharacters = prompt("Password must be length of at least 8 characters and no more than 128 characters.Try again!");
   }
   return confirmLength
 }
