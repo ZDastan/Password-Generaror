@@ -16,9 +16,7 @@ I learn so much with this project!
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
+https://zdastan.github.io/Password-Generator/
 
 ![alt text](./Assets/images/Screenshot-1.png)
 ![alt text](./Assets/images/Screenshot-2.png)
