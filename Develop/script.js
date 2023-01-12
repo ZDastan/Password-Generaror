@@ -45,7 +45,7 @@ function numberOfCharacters() {
     return("Please enter valid length.")
     numberOfCharacters()
   } else if (isNaN(numberOfCharacters)) {
-    numberOfCharacters = prompt("Password must be length of at least 8 characters and no more than 128 characters.Try again!");
+    confirmLength= prompt("Password must be length of at least 8 characters and no more than 128 characters.Try again!");
   }
   return confirmLength
 }
