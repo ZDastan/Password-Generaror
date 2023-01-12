@@ -16,6 +16,7 @@ function generatePassword(){
   const hasSpecialChar = confirm("Special characters ?")
   const hasAlpaLower = confirm("Lowercase character?")
   const hasAlphaUpper = confirm("UpperCase?")
+  
   const availableCharacters = [
     ...(hasNumber ? number : []),
     ...(hasSpecialChar ? specialChar : []),
