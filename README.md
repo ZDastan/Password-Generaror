@@ -2,9 +2,12 @@
 
 
 ## Description
-It was great experinance to take part to generate password.I build password generator that ask user to choose 8 to 128 lenght of character to choose.
+
+It was great experinance to take part to generate password.
+I build password generator that ask user to choose 8 to 128 lenght of character to choose.
 Also page ask to user if they like to choose number, special character , uppercase letter and lowercase letter.
-If users choose less or more  lenght page keep asking same question to choose criteria lenght,if users not choose any criteria , page alert to choose at leat one character.
+If users choose less or more  lenght page keep asking same question to choose criteria lenght,
+if users not choose any criteria , page alert to choose at leat one character.
 I have issue to create remaind users about lentght of character but i figure out sort that with "while loop".
 I learn so much with this project!
 
@@ -17,27 +20,14 @@ Provide instructions and examples for use. Include screenshots as needed.
 
 To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
 
-![alt text](./Assets/images/Screenshot-pls%20-choose.png)
+![alt text](./Assets/images/Screenshot-1.png)
+![alt text](./Assets/images/Screenshot-2.png)
+![alt text](./Assets/images/Screenshot-3.png)
+![alt text](./Assets/images/Screenshot-4.png)
+![alt text](./Assets/images/Screenshot-5.png)
+![alt text](./Assets/images/Screenshot-6.png)
 
 
-
-![alt text](./Assets/images/Screenshot%20-number.png)
-
-
-
-
-
-
-
-
-
-## Credits
-
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
 
 ## License
 
