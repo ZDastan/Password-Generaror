@@ -23,7 +23,12 @@ function generatePassword(){
     ...(hasAlphaUpper ? alphaUpper : []),
   ]
   console.log(availableCharacters)
-
+  
+  //Add reload statment
+if (hasNumber===false&&hasSpecialChar===false&&hasAlpaLower===false&&hasAlphaUpper===false){
+  alert("You must choose one type of charcter to creat password.")
+  window.location.reload()
+}
   // generate password
 
   var password ="";
@@ -36,16 +41,13 @@ function generatePassword(){
 
 }
 
-
+var confirmLength=0
 
 //Add condattion function
 function numberOfCharacters() {
-  var confirmLength = parseInt(prompt("How many characters would you like your password to contain?"));
-  if (numberOfCharacters < 8 || numberOfCharacters > 128) {
-    return("Please enter valid length.")
-    numberOfCharacters()
-  } else if (isNaN(numberOfCharacters)) {
-    confirmLength= prompt("Password must be length of at least 8 characters and no more than 128 characters.Try again!");
+ 
+  while(confirmLength < 8 || confirmLength > 128 || isNaN(confirmLength) || confirmLength === "") {
+    confirmLength=prompt("Plese choose password length between 8 and 128 characters.")
   }
   return confirmLength
 }
